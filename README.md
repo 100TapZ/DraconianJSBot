@@ -88,6 +88,6 @@ You can easily host your own intance on Heroku or Replit via clicking the button
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RealKoolisw/DraconianJSBot)
 
-[![Run on Repl.it](https://repl.it/badge/github/100TapZ/DraconianJSBot)
+![Run on Repl.it](https://repl.it/badge/github/100TapZ/DraconianJSBot)
 
 Add `PREFIX` as a variable to run the bot :D 
