@@ -1,4 +1,5 @@
 const Discord = module.require("discord.js");
+const config = require("../../config/config.json");
 const ms = require("ms");
 
 module.exports.run = async (bot, message, args) => {
@@ -42,7 +43,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
 	name: "timer",
 	description: "This command is used for timing.",
-	usage: "d!timer <duration in ms>",
+	usage: `${client.config.prefix}timer <duration in ms>`,
 	accessableby: "Member",
 	aliases: []
 };

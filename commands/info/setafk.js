@@ -1,3 +1,5 @@
+const config = require("../../config/config.json");
+
 module.exports.run = (client, message, args) => {
 	const setStatus = message.content.split(" ");
 
@@ -17,7 +19,7 @@ module.exports.run = (client, message, args) => {
 module.exports.help = {
 	name: "setafk",
 	description: "This command is used for setting yourself as afk.",
-	usage: "d!setafk",
+	usage: `${client.config.prefix}setafk`,
 	accessableby: "Member",
 	aliases: []
 };

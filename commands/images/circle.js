@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const canvacord = require("canvacord");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const target = message.mentions.users.first();
@@ -50,7 +51,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "circle",
 	description: "Circle the images or avatar",
-	usage: "d!circle <mentions>(optional)",
+	usage: `${client.config.prefix}circle <mentions>(optional)`,
 	accessableby: "Member",
 	aliases: []
 };

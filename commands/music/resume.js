@@ -1,3 +1,5 @@
+const config = require("../../config/config.json");
+
 module.exports.run = async (client, message, args) => {
 	if (!message.member.voice.channel)
 		return message.channel.send(
@@ -12,7 +14,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "resume",
 	description: "This command is used for resuming music.",
-	usage: "d!resume",
+	usage: `${client.config.prefix}resume`,
 	accessableby: "Member",
 	aliases: []
 };

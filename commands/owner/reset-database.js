@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const settings = require("../../config/settings.json");
+const config = require("../../config/config.json");
 
 exports.run = async (client, message, args) => {
 	if (message.author.id != process.env.OWNERID)
@@ -31,7 +32,7 @@ exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "reset-data",
 	description: "This command is used for resetting data.",
-	usage: "d!reset-data",
+	usage: `${client.config.prefix}reset-data`,
 	accessableby: "Bot Owners/Database Manager",
 	aliases: []
 };

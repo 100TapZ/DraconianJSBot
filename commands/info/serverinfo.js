@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 function checkDays(date) {
 	const now = new Date();
@@ -69,7 +70,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "serverinfo",
 	description: "This command is used for checking the server info.",
-	usage: "d!serverinfo",
+	usage: `${client.config.prefix}serverinfo`,
 	accessableby: "Member",
 	aliases: []
 };

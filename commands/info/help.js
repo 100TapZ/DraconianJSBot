@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const settings = require("../../config/settings.json");
@@ -14,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 			)
 			.setColor("GREEN")
 			.setDescription(
-				`**My prefix:** \`${prefixesdatabase.prefix}\` , ${emojis.slash} Slash Commands list for \`/help\`\nClick [HERE](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) to invite me to your server.`
+				`**My prefix:** \`${prefixesdatabase.prefix}\` , ${emojis.slash} Slash Commands list for \`/help\`\nClick [HERE].`
 			)
 			.addField("**📱Basic**", "`help`, `ping`, `vote`, `uptime`")
 			.addField(
@@ -41,13 +42,9 @@ module.exports.run = async (client, message, args) => {
 				"**🛠️Moderation**",
 				"`ban`, `clear`, `clearwarn`, `createchannel`, `createemoji`, `kick`, `lockchannel`, `mute`, `rename`, `slowmode`, `unban`, `unlockchannel`, `unmute`, `warn`, `warnings`"
 			)
-			.addField(
-				"**:underage:NSFW**",
-				"`4knsfw`, `anal`, `ass`, `hentai`, `holo`, `pussy`, `porn`, `urban`"
-			)
 			.addField("**:gear:Custom Function**", "`setprefix`")
 			.setFooter(
-				`© ${nowyear} ${client.user.username} | This command requested by ${message.author.username}#${message.author.discriminator}`
+				`© ${nowyear} ${client.user.username} | This command is requested by ${message.author.username}#${message.author.discriminator}`
 			);
 		return message.channel.send({ embed });
 	};
@@ -89,7 +86,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "help",
 	description: "This command is used for displaying all commands.",
-	usage: "d!help",
+	usage: `${client.config.prefix}help`,
 	accessableby: "Members",
 	aliases: []
 };

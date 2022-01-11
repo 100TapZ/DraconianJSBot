@@ -1,3 +1,5 @@
+const config = require("../../config/config.json");
+
 module.exports.run = async (client, message, args) => {
 	if (!message.member.voice.channel)
 		return message.channel.send(
@@ -14,7 +16,7 @@ module.exports.help = {
 	name: "pause",
 	description:
 		"This command is used for pausing music when inside music channel.",
-	usage: "d!pause",
+	usage: `${client.config.prefix}pause`,
 	accessableby: "Members",
 	aliases: []
 };

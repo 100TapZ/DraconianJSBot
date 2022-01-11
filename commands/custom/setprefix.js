@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const settings = require("../../config/settings.json");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const embedmissingperms = new Discord.MessageEmbed()
@@ -81,7 +82,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "setprefix",
 	description: "This command is used for changing the prefix.",
-	usage: "d!setprefix <value>",
+	usage: `${client.config.prefix}setprefix <value>`,
 	accessableby: "Manage Server",
 	aliases: []
 };

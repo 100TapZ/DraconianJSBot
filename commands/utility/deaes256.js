@@ -1,4 +1,5 @@
 const Cryptr = require("cryptr");
+const config = require("../../config/config.json");
 
 const decrypt = (text, key) => {
 	const cryptr = new Cryptr(key);
@@ -25,7 +26,7 @@ module.exports.help = {
 	name: "dae256",
 	description:
 		"This command is used for dencrypting your text data with AES256 dencryption",
-	usage: "d!dae256 <encrypted-data>",
+	usage: `${client.config.prefix}dae256 <encrypted-data>`,
 	accessableby: "Member",
 	aliases: []
 };

@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const canvacord = require("canvacord");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const notice3 = new Discord.MessageEmbed()
@@ -24,7 +25,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "changemymind",
 	description: "Changemymind please.",
-	usage: "d!changemymind <text>(optional)",
+	usage: `${client.config.prefix}changemymind <text>(optional)`,
 	accessableby: "Member",
 	aliases: []
 };

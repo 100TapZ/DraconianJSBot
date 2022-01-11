@@ -1,3 +1,5 @@
+const config = require("../../config/config.json");
+
 module.exports.run = async (client, message, args) => {
 	if (!message.member.voice.channel)
 		return message.channel.send(
@@ -15,7 +17,7 @@ module.exports.help = {
 	name: "autoplay",
 	description:
 		"This command is used for enabling or disabling autoplay features for music system.",
-	usage: "d!autoplay",
+	usage: `${client.config.prefix}autoplay`,
 	accessableby: "Member",
 	aliases: []
 };

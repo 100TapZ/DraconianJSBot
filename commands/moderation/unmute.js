@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args) => {
 	if (member.id === message.author.id) return message.channel.send(notice2);
 	const embed7 = new Discord.MessageEmbed()
 		.setTitle("Wrong Usage!")
-		.setDescription("Correct Example: d!unmute @RealKoolisw")
+		.setDescription(`Correct Example: ${client.config.prefix}unmute @RealKoolisw`)
 		.setColor("RED");
 	if (!member) {
 		message.delete();
@@ -91,7 +91,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "unmute",
 	description: "This command is used for unmuting someone",
-	usage: "d!unmute <mention>",
+	usage: `${client.config.prefix}unmute <mention>`,
 	accessableby: "Manage Roles",
 	aliases: []
 };

@@ -49,7 +49,7 @@ module.exports.help = {
 	name: "reload-all",
 	description:
 		"This command is used for reload all commands without rebooting/restart the bot.",
-	usage: "d!reload-all",
+	usage: `${client.config.prefix}reload-all`,
 	accessableby: "Bot Owners",
 	aliases: []
 };

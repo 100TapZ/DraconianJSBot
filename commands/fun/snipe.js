@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = (client, message, args) => {
 	const msg = client.snipes.get(message.channel.id);
@@ -18,7 +19,7 @@ module.exports.help = {
 	name: "snipe",
 	description:
 		"This command is used for sniping latest message been deleted by members.",
-	usage: "d!snipe",
+	usage: `${client.config.prefix}snipe`,
 	accessableby: "Member",
 	aliases: []
 };

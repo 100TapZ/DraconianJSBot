@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const canvacord = require("canvacord");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const target = message.mentions.users.first();
@@ -51,7 +52,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "rip",
 	description: "This command is used for generating people IN RiP.",
-	usage: "d!rip <mentions>",
+	usage: `${client.config.prefix}rip <mentions>`,
 	accessableby: "Member",
 	aliases: []
 };

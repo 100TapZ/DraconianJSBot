@@ -1,3 +1,5 @@
+const config = require("../../config/config.json");
+
 module.exports.run = async (client, message, args) => {
 	const queue = client.distube.getQueue(message);
 	if (Number(args[0]) >= 0 && Number(args[0]) <= queue.songs.length) {
@@ -11,7 +13,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "jumpto",
 	description: "This command is used for jumping to song into specify queue.",
-	usage: "d!jumpto <queue number>",
+	usage: `${client.config.prefix}jumpto <queue number>`,
 	accessableby: "Members",
 	aliases: []
 };

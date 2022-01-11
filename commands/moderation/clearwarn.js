@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const ms = require("ms");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const notice1 = new Discord.MessageEmbed()
@@ -70,7 +71,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "clearwarn",
 	description: "Clear the warnings",
-	usage: "d!clearwarn <mention>",
+	usage: `${client.config.prefix}clearwarn <mention>`,
 	accessableby: "Manage Roles",
 	aliases: []
 };

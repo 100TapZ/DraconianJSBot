@@ -65,7 +65,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "clear",
 	description: "Clear the message with amount",
-	usage: "d!clear <amount>(1-99)",
+	usage: `${client.config.prefix}clear <amount>(1-99)`,
 	accessableby: "Manage Message",
 	aliases: []
 };

@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = async (bot, message, args) => {
 	const shoutinfo = args.slice(1).join(" ");
@@ -41,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
 	name: "embed",
 	description: "This command is used for embedding stuff in discord",
-	usage: "d!embed <title> <desc>",
+	usage: `${client.config.prefix}embed <title> <desc>`,
 	accessableby: "Member",
 	aliases: []
 };

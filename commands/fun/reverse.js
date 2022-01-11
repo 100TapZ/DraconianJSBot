@@ -1,3 +1,5 @@
+const config = require("../../config/config.json");
+
 module.exports.run = async (client, message, args) => {
 	try {
 		if (!args[0])
@@ -14,7 +16,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "reverse",
 	description: "This command is used for reversing words.",
-	usage: "d!reverse",
+	usage: `${client.config.prefix}reverse`,
 	accessableby: "Member",
 	aliases: []
 };

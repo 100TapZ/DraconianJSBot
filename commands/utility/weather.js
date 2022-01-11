@@ -1,4 +1,5 @@
 const Discord = module.require("discord.js");
+const config = require("../../config/config.json");
 const weather = require("weather-js");
 
 module.exports.run = async (bot, message, args) => {
@@ -43,7 +44,7 @@ module.exports.help = {
 	name: "weather",
 	description:
 		"Check the weather in your location or area within newest climate/weather status",
-	usage: "d!weather <location/area>",
+	usage: `${client.config.prefix}weather <location/area>`,
 	accessableby: "Members",
 	aliases: []
 };

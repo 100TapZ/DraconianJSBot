@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const canvacord = require("canvacord");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const usernotfind = new Discord.MessageEmbed()
@@ -49,7 +50,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "trigger",
 	description: "This command is used for generating trigger image",
-	usage: "d!trigger <mention or attachment>",
+	usage: `${client.config.prefix}trigger <mention or attachment>`,
 	accessableby: "Member",
 	aliases: []
 };

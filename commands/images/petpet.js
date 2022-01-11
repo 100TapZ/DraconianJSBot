@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const petPetGif = require("pet-pet-gif");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const usernotfind = new Discord.MessageEmbed()
@@ -49,7 +50,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "petpet",
 	description: "Generate Pet Pet pictures.",
-	usage: "d!petpet <mentions / attachments>(optional)",
+	usage: `${client.config.prefix}petpet <mentions / attachments>(optional)`,
 	accessableby: "Member",
 	aliases: []
 };

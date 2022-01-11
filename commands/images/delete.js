@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const canvacord = require("canvacord");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const usernotfind = new Discord.MessageEmbed()
@@ -49,7 +50,7 @@ module.exports.help = {
 	name: "delete",
 	description:
 		"This command is used for delete someone u hates with windows trash bin",
-	usage: "d!delete [<mention> or <attachments>]",
+	usage: `${client.config.prefix}delete [<mention> or <attachments>]`,
 	accessableby: "Member",
 	aliases: []
 };

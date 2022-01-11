@@ -1,3 +1,5 @@
+const config = require("../../config/config.json");
+
 module.exports.run = async (client, message, args) => {
 	if (!message.member.voice.channel)
 		return message.channel.send(
@@ -14,7 +16,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "stop",
 	description: "This command is used for stopping music.",
-	usage: "d!stop",
+	usage: `${client.config.prefix}stop`,
 	accessableby: "Member",
 	aliases: ["s", "dc", "fuckoff", "disconnect"]
 };

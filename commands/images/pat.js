@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	// eslint-disable-line no-unused-vars
@@ -29,7 +30,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "pat",
 	description: "This command is used for generating pat.",
-	usage: "d!pat <mentions>",
+	usage: `${client.config.prefix}pat <mentions>`,
 	accessableby: "Members",
 	aliases: []
 };

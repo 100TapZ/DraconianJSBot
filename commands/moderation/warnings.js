@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const ms = require("ms");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const emddd = new Discord.MessageEmbed()
@@ -43,7 +44,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "warnings",
 	description: "Check the people you mentioned who has warnings or not",
-	usage: "d!warnings <mention>",
+	usage: `${client.config.prefix}warnings`,
 	accessableby: "Members",
 	aliases: []
 };

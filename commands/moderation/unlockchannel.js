@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 exports.run = (client, message, args) => {
 	const notice3 = new Discord.MessageEmbed()
@@ -44,7 +45,7 @@ exports.run = (client, message, args) => {
 module.exports.help = {
 	name: "unlockchannel",
 	description: "This command is used for unlockchanneling",
-	usage: "d!unlockchannel",
+	usage: `${client.config.prefix}unlockchannel`,
 	accessableby: "Manage Channels",
 	aliases: []
 };

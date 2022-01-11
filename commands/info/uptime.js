@@ -3,6 +3,7 @@ const fetch = require("node-fetch");
 // let days = 0;
 // let week = 0;
 const os = require("os");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const nowtime = new Date().toLocaleString("en", {
@@ -73,7 +74,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "uptime",
 	description: "This command is used for reporting bot's uptime",
-	usage: "d!uptime",
+	usage: `${client.config.prefix}uptime`,
 	accessableby: "Member",
 	aliases: []
 };

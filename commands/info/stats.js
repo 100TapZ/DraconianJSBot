@@ -45,7 +45,7 @@ module.exports.run = async (client, message) => {
 module.exports.help = {
 	name: "stats",
 	description: "This command is used for monitoring stats of bot.",
-	usage: "d!stats",
+	usage: `${client.config.prefix}stats`,
 	accessableby: "Member",
 	aliases: []
 };

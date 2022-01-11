@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const notice3 = new Discord.MessageEmbed()
@@ -49,7 +50,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "createemoji",
 	description: "Create emoji easily with commands",
-	usage: "d!createemoji <name> <attachments>",
+	usage: `${client.config.prefix}createemoji <name> <attachments>`,
 	accessableby: "Manage Emojis",
 	aliases: []
 };

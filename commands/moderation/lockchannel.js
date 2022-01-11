@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const ms = require("ms");
+const config = require("../../config/config.json");
 
 module.exports.run = (client, message, args) => {
 	const dfgrdgdfgdf = new Discord.MessageEmbed()
@@ -85,7 +86,7 @@ module.exports.run = (client, message, args) => {
 module.exports.help = {
 	name: "lockchannel",
 	description: "This command is used for locking the channels.",
-	usage: "d!lockchannel <duration>",
+	usage: `${client.config.prefix}lockchannel <duration>`,
 	accessableby: "Manage Channels",
 	aliases: []
 };

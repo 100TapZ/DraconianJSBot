@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const superagent = require("superagent");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	if (!message.mentions.users.first())
@@ -32,7 +33,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "poke",
 	description: "This command is used for poke someone",
-	usage: "d!poke <mention>",
+	usage: `${client.config.prefix}poke <mention>`,
 	accessableby: "Members",
 	aliases: []
 };

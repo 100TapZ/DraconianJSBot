@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const request = require("request");
+const config = require("../../config/config.json");
 
 module.exports.run = (client, message, _args) => {
 	try {
@@ -29,7 +30,7 @@ module.exports.run = (client, message, _args) => {
 module.exports.help = {
 	name: "meme",
 	description: "This command is used for generating some cool memes.",
-	usage: "d!meme",
+	usage: `${client.config.prefix}meme`,
 	accessableby: "Member",
 	aliases: []
 };

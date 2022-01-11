@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = (client, message, args) => {
 	const channelinfo = message.mentions.channels.first() || message.channel;
@@ -23,7 +24,7 @@ module.exports.run = (client, message, args) => {
 module.exports.help = {
 	name: "channel",
 	description: "Checking channel status.",
-	usage: "d!channel <channel-mentions>(optional)",
+	usage: `${client.config.prefix}channel <channel-mentions>(optional)`,
 	accessableby: "Member",
 	aliases: []
 };

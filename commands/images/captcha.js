@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const user =
@@ -61,7 +62,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "captcha",
 	description: "This command is used for posting dog's images randomly.",
-	usage: "d!captcha",
+	usage: `${client.config.prefix}captcha`,
 	accessableby: "Members",
 	aliases: []
 };

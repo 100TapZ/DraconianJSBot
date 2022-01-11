@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const usernotfind = new Discord.MessageEmbed()
@@ -58,7 +59,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "iphonex",
 	description: "This command is used for posting dog's images randomly.",
-	usage: "d!iphonex",
+	usage: `${client.config.prefix}iphonex`,
 	accessableby: "Members",
 	aliases: []
 };

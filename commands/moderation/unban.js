@@ -46,7 +46,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "unban",
 	description: "This command is used for unbanning someone",
-	usage: "d!unban <USER ID>",
+	usage: `${client.config.prefix}unban <USER ID>`,
 	accessableby: "Ban Members",
 	aliases: []
 };

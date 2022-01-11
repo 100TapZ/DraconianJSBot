@@ -1,3 +1,5 @@
+const config = require("../../config/config.json");
+
 exports.run = async (client, message, args) => {
 	const queue = client.distube.getQueue(message);
 	if (!queue)
@@ -18,7 +20,7 @@ exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "queue",
 	description: "This command is used for fetching queue from music system.",
-	usage: "d!queue",
+	usage: `${client.config.prefix}queue`,
 	accessableby: "Members",
 	aliases: []
 };

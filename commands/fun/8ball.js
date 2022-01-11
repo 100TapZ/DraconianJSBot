@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 function doMagic8BallVoodoo() {
 	const rand = [
@@ -27,7 +28,7 @@ module.exports.help = {
 	name: "8ball",
 	description:
 		"This command is used for asking the bot what he wanted to answer as 8ball.",
-	usage: "d!8ball <questions>",
+	usage: `${client.config.prefix}8ball <questions>`,
 	accessableby: "Member",
 	aliases: []
 };

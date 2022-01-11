@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const moment = require("moment");
+const config = require("../../config/config.json");
 
 module.exports.run = async (bot, message, args) => {
 	const trufal = {
@@ -83,7 +84,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
 	name: "whois",
 	description: "Check who is him/her",
-	usage: "d!whois <mention or keep blank>",
+	usage: `${client.config.prefix}whois <mention or keep blank>`,
 	accessableby: "Members",
 	aliases: []
 };

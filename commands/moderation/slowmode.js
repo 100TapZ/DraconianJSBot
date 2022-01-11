@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 exports.run = (client, message, args) => {
 	const notice3 = new Discord.MessageEmbed()
@@ -63,7 +64,7 @@ module.exports.help = {
 	name: "slowmode",
 	description:
 		"This command is used for changing the slowmode as settings page cannot.",
-	usage: "d!slowmode <1-21600>",
+	usage: `${client.config.prefix}slowmode <1-21600>`,
 	accessableby: "Manage Channels",
 	aliases: []
 };

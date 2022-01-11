@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const canvacord = require("canvacord");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const usernotfind = new Discord.MessageEmbed()
@@ -49,7 +50,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "gay",
 	description: "This command is used for making an image to be rainbow",
-	usage: "d!gay <mentions or attachment>",
-	accessableby: "Memeber",
+	usage: `${client.config.prefix}gay <mentions or attachment>`,
+	accessableby: "Members",
 	aliases: []
 };

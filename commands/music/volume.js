@@ -1,3 +1,5 @@
+const config = require("../../config/config.json");
+
 module.exports.run = async (client, message, args) => {
 	if (!message.member.voice.channel) {
 		return message.channel.send(
@@ -25,7 +27,7 @@ module.exports.help = {
 	name: "volume",
 	description:
 		"This command is used for changing volume when playing the songs",
-	usage: "d!volume <value>",
+	usage: `${client.config.prefix}volume <value>`,
 	accessableby: "Member",
 	aliases: []
 };

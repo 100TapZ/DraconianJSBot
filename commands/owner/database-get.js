@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const rightNow = Date.now();
@@ -18,7 +19,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "database-get",
 	description: "N/A",
-	usage: "d!database-get",
+	usage: `${client.config.prefix}database-get`,
 	accessableby: "Bot Owners",
 	aliases: []
 };

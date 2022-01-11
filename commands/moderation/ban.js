@@ -33,9 +33,9 @@ module.exports.run = async (client, msg, args) => {
 			.then(msg => msg.delete({ timeout: 5000 }));
 	}
 	const kntlembed = new Discord.MessageEmbed()
-		.setTitle("Command: d!ban")
+		.setTitle(`Command: ban`)
 		.setDescription(
-			"Wrong Usage!。\n\n**Function:** Ban a member\n**Usage:** d!ban [User] [Reason]\n**Example:** d!ban @RealKoolisw Noob"
+			`Wrong Usage!。\n\n**Function:** Ban a member\n**Usage:** ${client.config.prefix}ban [User] [Reason]`
 		)
 		.setColor("RED");
 	if (!banTaged) {
@@ -107,7 +107,7 @@ module.exports.run = async (client, msg, args) => {
 module.exports.help = {
 	name: "ban",
 	description: "This command is used for banning the members you dont like.",
-	usage: "d!ban <mentions> <reason>(optional)",
+	usage: `${client.config.prefix}ban <mentions> <reason>(optional)`,
 	accessableby: "Ban Members",
 	aliases: []
 };

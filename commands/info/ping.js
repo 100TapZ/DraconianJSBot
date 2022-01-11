@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const bbb = new Discord.MessageEmbed().setDescription(
@@ -13,7 +14,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "ping",
 	description: "This command is used for pinging the bot.",
-	usage: "d!ping",
+	usage: `${client.config.prefix}ping`,
 	accessableby: "Members",
 	aliases: []
 };

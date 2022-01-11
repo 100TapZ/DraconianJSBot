@@ -1,5 +1,6 @@
 const request = require("request");
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = async (bot, message, args) => {
 	request("https://some-random-api.ml/img/cat", (error, _response, body) => {
@@ -18,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
 	name: "cat",
 	description: "This command is used for posting cat's images randomly.",
-	usage: "d!cat",
+	usage: `${client.config.prefix}cat`,
 	accessableby: "Members",
 	aliases: []
 };

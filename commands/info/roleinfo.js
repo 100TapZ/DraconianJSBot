@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const missingargs = new Discord.MessageEmbed()
@@ -42,7 +43,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "roleinfo",
 	description: "This command is used for generating people IN RiP.",
-	usage: "d!roleinfo <roles-ID>",
+	usage: `${client.config.prefix}roleinfo <roles-ID>`,
 	accessableby: "Member",
 	aliases: []
 };

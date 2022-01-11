@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const ms = require("ms");
+const config = require("../../config/config.json");
 
 exports.run = (client, message, args) => {
 	const newname = args.slice(1).join(" ");
@@ -36,7 +37,7 @@ exports.run = (client, message, args) => {
 module.exports.help = {
 	name: "rename",
 	description: "This command is used for renaming someone's nickname.",
-	usage: "d!rename <mentions> <nickname>",
+	usage: `${client.config.prefix}rename <mentions> <nickname>`,
 	accessableby: "Manage Nicknames",
 	aliases: []
 };

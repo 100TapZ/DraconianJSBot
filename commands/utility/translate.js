@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 const request = require("request");
 
 module.exports.run = (client, message, [args, ...words]) => {
@@ -76,6 +77,7 @@ module.exports.run = (client, message, [args, ...words]) => {
 		nn: "Norwegian nynorsk",
 		ps: "Pashto (Pushto)",
 		fa: "Persian (Farsi)",
+    ph: "Filipino",
 		pl: "Polish",
 		pt: "Portuguese",
 		pa: "Punjabi (Eastern)",
@@ -185,7 +187,7 @@ module.exports.help = {
 	name: "translate",
 	description:
 		"This command is used for translating stuff. Example: d!translate zh-en 你好, response: hello here",
-	usage: "d!translate <language>-<to-translate-language> <text>",
+	usage: `${client.config.prefix}translate <language>-<to-translate-language> <text>`,
 	accessableby: "Member",
 	aliases: []
 };

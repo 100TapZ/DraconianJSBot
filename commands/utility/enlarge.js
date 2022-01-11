@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const { parse } = require("twemoji-parser");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	const emoji = args[0];
@@ -28,7 +29,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "enlarge",
 	description: "This command is used for enlarging some emoji from everywhere",
-	usage: "d!enlarge <emojis>",
+	usage: `${client.config.prefix}enlarge <emojis>`,
 	accessableby: "Memeber",
 	aliases: []
 };

@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	if (message.author.id != process.env.OWNERID)
@@ -11,7 +12,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "send-message",
 	description: "N/A",
-	usage: "d!send-message [Message]",
+	usage: `${client.config.prefix}send-message [Message]`,
 	accessableby: "Bot Owners",
 	aliases: []
 };

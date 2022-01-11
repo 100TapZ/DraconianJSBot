@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const superagent = require("superagent");
+const config = require("../../config/config.json");
 
 module.exports.run = async (client, message, args) => {
 	if (!message.mentions.users.first())
@@ -25,7 +26,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
 	name: "tickle",
 	description: "This command is used for generating tickle image.",
-	usage: "d!tickle <mention>",
+	usage: `${client.config.prefix}tickle <mention>`,
 	accessableby: "Member",
 	aliases: []
 };

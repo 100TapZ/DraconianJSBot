@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const config = require("../../config/config.json");
 
 module.exports.run = (client, message, args) => {
 	const target = message.mentions.users.first();
@@ -23,7 +24,7 @@ module.exports.run = (client, message, args) => {
 module.exports.help = {
 	name: "avatar",
 	description: "This command is used for showing your/other member's avatar.",
-	usage: "d!avatar <mentions>(optional)",
+	usage: `${client.config.prefix}avatar <mentions>(optional)`,
 	accessableby: "Member",
 	aliases: ["av"]
 };
