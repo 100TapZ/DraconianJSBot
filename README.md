@@ -55,7 +55,10 @@ If met any issues, go [here](https://github.com/RealKoolisw/Draconian/issues) to
 
 ## Github Repository
 
-Draconian Made by Koolisw, project [Here](https://github.com/RealKoolisw/Draconian)
+Draconian Made by Koolisw, project [Here](https://github.com/RealKoolisw/Draconian)\
+Modified by [100TapZ](https://www.youtube.com/channel/UC9HqgwxfpYallSY6nji3Qcg)\
+for [100TapZ Community](https://discord.gg/cVrH73H7Ym)\
+project [Here](https://github.com/100TapZ/DraconianJSBot)
 
 ## Self-Hosting & Development
 
@@ -66,6 +69,8 @@ Requirement:
 
 Reminders:
 
+- If you are using your bot privately, remove the `commands/info/invite.js`
+- If you don't like NSFW for your server, remove the `nsfw` folder located in the `commands` folder.
 - If you are not using Discord Bot lists and top.gg, delete files from `handlers/dbl-loader.js` / `events/dbl/all-files` and removes all codes from index.js with `//`
 - If you are using Top.gg bot lists API, u need to delete `//` from commands lines from index.js
 - If you are not using .env supported hosters, please add code `require('dotenv').config()` to the top of the code from `index.js`, `shard.js` and other place are needed to use `process.env.(stuff)`
@@ -79,8 +84,10 @@ Reminders:
 
 Web Hosting : 
 
-You can easily deploy your own intance on Heroku via clicking the button below : 
+You can easily host your own intance on Heroku or Replit via clicking the button below : 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RealKoolisw/DraconianJSBot)
+
+[![Run on Repl.it](https://repl.it/badge/github/100TapZ/DraconianJSBot)]
 
 Add `PREFIX` as a variable to run the bot :D 
